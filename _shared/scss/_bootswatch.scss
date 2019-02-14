@@ -1,205 +1,128 @@
-// Litera 4.2.1
+// Lux 4.3.1
 // Bootswatch
 
 
 // Variables ===================================================================
 
-$font-family-serif:      Georgia, Cambria, "Times New Roman", Times, serif !default;
+$web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans:400,600" !default;
+@import url($web-font-path);
 
 // Navbar ======================================================================
 
 .navbar {
-  font-size: 0.875em;
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+  font-weight: 600;
+
+  &-nav {
+    .nav-link {
+      padding-top: .715rem;
+      padding-bottom: .715rem;
+    }
+  }
+
+  &-brand {
+    margin-right: 2rem;
+  }
 }
 
-.bg-dark {
-  background-color: $success !important;
+.bg-primary {
+  background-color: $gray-900 !important;
 }
 
 .bg-light {
-  background-color: #fff !important;
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   &.navbar-fixed-top {
     border-width: 0 0 1px 0;
   }
 
-  &.navbar-fixed-bottom {
+  &.navbar-bottom-top {
     border-width: 1px 0 0 0;
   }
+}
+
+.nav-item {
+  margin-right: 2rem;
 }
 
 // Buttons =====================================================================
 
 .btn {
-  border-radius: 1.078em;
-  font-family: $font-family-sans-serif;
-  font-size: 0.875em;
-
-  &-lg {
-    border-radius: 2.688em;
-  }
+  font-size: $font-size-sm;
+  text-transform: uppercase;
 
   &-sm {
-    border-radius: 0.844em;
-    font-size: 0.688em;
+    font-size: 10px;
   }
 
-  &-secondary,
-  &-secondary:hover,
-  &-warning,
-  &-warning:hover {
+  &-warning {
+    &,
+    &:hover,
+    &:not([disabled]):not(.disabled):active,
+    &:focus {
+      color: $white;
+    }
+  }
+}
+
+.btn-outline-secondary {
+  border-color: $gray-600;
+  color: $gray-600;
+
+  &:not([disabled]):not(.disabled):hover,
+  &:not([disabled]):not(.disabled):focus,
+  &:not([disabled]):not(.disabled):active {
+    background-color: $gray-400;
+    border-color: $gray-400;
     color: $white;
   }
+
+  &:not([disabled]):not(.disabled):focus {
+    box-shadow: 0 0 0 0.2rem rgba($gray-400, 0.5);
+  }
+}
+
+[class*="btn-outline-"] {
+  border-width: 2px;
+}
+
+.border-secondary {
+  border: 1px solid $gray-400 !important;
 }
 
 // Typography ==================================================================
 
-p {
-  font-family: $font-family-serif;
+body {
+  font-weight: 200;
+  letter-spacing: 1px;
 }
 
-blockquote {
-  font-style: italic;
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
-footer {
-  font-size: 0.875em;
-}
-
-.lead {
-  color: $gray-600;
-  font-family: $font-family-sans-serif;
+.text-secondary {
+  color: $body-color !important;
 }
 
 // Tables ======================================================================
 
-table,
-.table {
-  font-size: 0.875em;
-
-  &-primary,
-  &-secondary,
-  &-success,
-  &-info,
-  &-warning,
-  &-danger {
-    color: #fff;
-  }
+th {
+  font-size: $font-size-sm;
+  text-transform: uppercase;
 }
 
 .table {
-
-  &-primary {
-    &, > th, > td {
-      background-color: $primary;
-    }
+  th, td {
+    padding: 1.5rem;
   }
 
-  &-secondary {
-    &, > th, > td {
-      background-color: $secondary;
+  &-sm {
+    th, td {
+      padding: 0.75rem;
     }
-  }
-
-  &-light {
-    &, > th, > td {
-      background-color: $light;
-    }
-  }
-
-  &-dark {
-    &, > th, > td {
-      background-color: $dark;
-    }
-  }
-
-  &-success {
-    &, > th, > td {
-      background-color: $success;
-    }
-  }
-
-  &-info {
-    &, > th, > td {
-      background-color: $info;
-    }
-  }
-
-  &-danger {
-    &, > th, > td {
-      background-color: $danger;
-    }
-  }
-
-  &-warning {
-    &, > th, > td {
-      background-color: $warning;
-    }
-  }
-
-  &-active {
-    &, > th, > td {
-      background-color: $table-active-bg;
-    }
-  }
-
-  &-hover {
-
-    .table-primary:hover {
-      &, > th, > td {
-        background-color: darken($primary, 5%);
-      }
-    }
-
-    .table-secondary:hover {
-      &, > th, > td {
-        background-color: darken($secondary, 5%);
-      }
-    }
-
-    .table-light:hover {
-      &, > th, > td {
-        background-color: darken($light, 5%);
-      }
-    }
-
-    .table-dark:hover {
-      &, > th, > td {
-        background-color: darken($dark, 5%);
-      }
-    }
-
-    .table-success:hover {
-      &, > th, > td {
-        background-color: darken($success, 5%);
-      }
-    }
-
-    .table-info:hover {
-      &, > th, > td {
-        background-color: darken($info, 5%);
-      }
-    }
-
-    .table-danger:hover {
-      &, > th, > td {
-        background-color: darken($danger, 5%);
-      }
-    }
-
-    .table-warning:hover {
-      &, > th, > td {
-        background-color: darken($warning, 5%);
-      }
-    }
-
-    .table-active:hover {
-      &, > th, > td {
-        background-color: $table-active-bg;
-      }
-    }
-
   }
 }
 
@@ -207,69 +130,28 @@ table,
 
 // Navs ========================================================================
 
-.nav,
-.breadcrumb,
-.pagination {
-  font-size: 0.875em;
-}
-
 .dropdown-menu {
-  font-size: 0.875em;
+  font-size: $font-size-sm;
+  text-transform: none;
 }
 
 // Indicators ==================================================================
-
-.alert {
-  border: none;
-  color: $white;
-  font-size: 0.875em;
-
-  &, p {
-    font-family: $font-family-sans-serif;
-  }
-
-  a, .alert-link {
-    color: #fff;
-    font-weight: normal;
-    text-decoration: underline;
-  }
-
-  @each $color, $value in $theme-colors {
-    &-#{$color} {
-      @if $enable-gradients {
-        background: $value linear-gradient(0deg, mix($body-bg, $value, 15%), $value) repeat-x;
-      } @else {
-        background-color: $value;
-      }
-    }
-  }
-
-  &-light {
-    &,
-    & a,
-    & .alert-link {
-      color: $body-color;
-    }
-  }
-}
-
-.badge {
-  vertical-align: bottom;
-
-  &-secondary,
-  &-warning {
-    color: $white;
-  }
-}
-
-.tooltip {
-  font-size: 11px;
-}
 
 // Progress bars ===============================================================
 
 // Containers ==================================================================
 
-.list-group {
-  font-size: 0.875em;
+.list-group-item {
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: inherit;
+  }
+}
+
+.card {
+
+  &-title,
+  &-header {
+    color: inherit;
+  }
 }
