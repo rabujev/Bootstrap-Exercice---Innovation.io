@@ -6,9 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>BeCode / JavaScript for the Web Exercise</title>
-
-    <link rel="icon" href="./_shared/img/becode-seal.png" />
+    <title>Bootstrap Exercice - Innovation.io</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
@@ -17,24 +15,71 @@
       crossorigin="anonymous">
 
     <link rel="stylesheet" href="./style.scss">
-
   </head>
+
   <body>
-    
-    <div class="container">
+    <div class="container-fluid">
       <header>
-        <h1>BeCode / JavaScript for the Web</h1>
-        <h2>
-          <strong><i class="fas fa-arrow-right"></i> Insert exercise name here <i class="fas fa-arrow-left"></i></strong>
-        </h2>
       </header>
-      <div class="content">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Innovation.io</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.njk">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="team.njk">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+       <div class="content">
         {% block content %}
         {% endblock %}
+       </div>
+      <!-- Footer -->
+      <footer class="page-footer font-small blue pt-4">
+        <hr>
+          <!-- Footer Links -->
+          <div class="container-fluid text-center text-md-left">
+            <!-- Grid row -->
+            <div class="row">
+              <!-- Grid column -->
+              <div class="col-md-6 mt-md-0 mt-3">
+                <!-- Content -->
+                <h5 class="text-uppercase"></h5>
+                <p></p>
+              </div>
+                  <!-- Links -->
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#!">Front page</a>
+                    </li>
+                    <li>
+                      <a href="#!">Team</a>
+                    </li>
+                    <li>
+                      <a href="#!">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+                  <!-- Links -->
+          <!-- Footer Links -->
+          <!-- Copyright -->
+          <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="">Innovation.io</a>
+          </div>
+          <!-- Copyright -->
       </div>
-    </div>
-
+      </footer>
+      <!-- Footer -->
     <script src="./script.js"></script>
   </body>
 </html>
-

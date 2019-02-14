@@ -19,5 +19,18 @@
     "bootstrap": "^4.2.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.6"
-  }
+  },
+  "main": "script.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rabujev/Bootstrap-Exercice---Innovation.io.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/rabujev/Bootstrap-Exercice---Innovation.io/issues"
+  },
+  "homepage": "https://github.com/rabujev/Bootstrap-Exercice---Innovation.io#readme"
 }
